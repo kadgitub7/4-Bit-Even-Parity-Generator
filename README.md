@@ -8,6 +8,7 @@ A Verilog implementation of a 4-bit even parity generator, developed in Vivado I
 
 - [What Is a 4-Bit Even Parity Generator?](#what-is-a-4-bit-even-parity-generator)
 - [Learning Resources](#learning-resources)
+- [Running the Project in Vivado](#running-the-project-in-vivado)
 - [Truth Table](#truth-table)
 - [K-Map](#k-map)
 - [Simplified Boolean Equation](#simplified-boolean-equation)
@@ -39,6 +40,42 @@ Useful online resources for parity, logic gates, and digital design:
 | [Logic Gates – AND, OR, NOT, XOR, XNOR (YouTube)](https://www.youtube.com/results?search_query=logic+gates+XOR+XNOR) | Search for “logic gates XOR XNOR” for gate behavior and truth tables. |
 | [Digital Electronics – Parity (YouTube)](https://www.youtube.com/results?search_query=digital+electronics+parity) | Search for “digital electronics parity” for parity in the context of digital systems. |
 | [K-Map Simplification (YouTube)](https://www.youtube.com/results?search_query=karnaugh+map+simplification) | Search for “Karnaugh map simplification” to see how the parity expression is derived. |
+
+---
+
+## Running the Project in Vivado
+
+Follow these steps to create a Vivado project, add the design and testbench, and run simulation.
+
+### 1. Create a new project
+
+1. Launch **Vivado** (e.g., Vivado HLx or Vivado ML Edition).
+2. Click **Create Project** (or **File → Project → New**).
+3. Click **Next**, choose a project name and location, then **Next**.
+4. Select **RTL Project** and leave "Do not specify sources at this time" unchecked if you want to add sources in the next step, or check it and add sources later. Click **Next**.
+5. For **Default Part**, pick any FPGA part (e.g., a Xilinx Artix-7 or your board's part). For simulation-only you can choose any part. Click **Next**, then **Finish**.
+
+### 2. Add design and testbench sources
+
+1. In the **Flow Navigator**, under **Project Manager**, click **Add Sources** (or **File → Add Sources**).
+2. Choose **Add or create design sources**, click **Add Files**, and add:
+   - `EvenParityGenerator.v`
+3. Click **Add or create simulation sources**, click **Add Files**, and add:
+   - `ParityGenerator_tb.v`
+4. Click **OK** and **Finish**. Ensure the testbench is set as a simulation-only source (not as a design source).
+
+### 3. Run behavioral simulation
+
+1. In the **Flow Navigator**, under **Simulation**, click **Run Behavioral Simulation** (or **Flow → Run Simulation → Run Behavioral Simulation**).
+2. Vivado will compile the design and testbench and open the **Simulation** tab with the waveform.
+3. Use the waveform to verify that the parity output **P₀** matches the [Truth Table](#truth-table) for all 16 input combinations of b₀–b₃.
+
+### 4. (Optional) Run synthesis and implementation
+
+To synthesize and implement for an FPGA:
+
+1. Under **Flow Navigator**, click **Run Synthesis**, then **Run Implementation**, then **Generate Bitstream** (if you need a bitstream for your board).
+2. For this small design, no constraints file is required unless you assign pins or clocks.
 
 ---
 
