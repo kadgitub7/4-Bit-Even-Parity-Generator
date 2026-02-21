@@ -100,10 +100,6 @@ $$= (b_2 \oplus b_3)(b_1 \oplus b_0)' + (b_3 \oplus b_2)'(b_0 \oplus b_1)$$
 
 $$P_0 = (b_2 \oplus b_3) \oplus (b_0 \oplus b_1) = b_0 \oplus b_1 \oplus b_2 \oplus b_3$$
 
-**Equation template** (for your own design):
-
-$$P_0 = \underline{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }$$
-
 ---
 
 ## XOR and XNOR Gates
