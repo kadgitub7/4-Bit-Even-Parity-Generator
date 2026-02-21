@@ -71,7 +71,7 @@ Karnaugh map for **P₀** in terms of b₀, b₁, b₂, b₃ (b₀b₁ on the le
 
 | b₀b₁ \ b₂b₃ | 00 | 01 | 11 | 10 |
 |:------------:|:--:|:--:|:--:|:--:|
-| **00**       | 1  |    | 1  |    |
+| **00**       |    | 1  |    | 1  |
 | **01**       | 1  |    | 1  |    |
 | **11**       |    | 1  |    | 1  |
 | **10**       | 1  |    | 1  |    |
@@ -85,11 +85,6 @@ Karnaugh map for **P₀** in terms of b₀, b₁, b₂, b₃ (b₀b₁ on the le
 **Sum-of-products (minterms):**
 
 $$P_0 = \bar{b_0}\bar{b_1}\bar{b_2}b_3 + \bar{b_0}\bar{b_1}b_2\bar{b_3} + \bar{b_0}b_1\bar{b_2}\bar{b_3} + \bar{b_0}b_1b_2b_3 + b_0b_1\bar{b_2}b_3 + b_0b_1b_2\bar{b_3} + b_0\bar{b_1}\bar{b_2}\bar{b_3} + b_0\bar{b_1}b_2b_3$$
-
-**Factored form using XOR and XNOR:**
-
-- \((x'_2 x_3 + x_2 x'_3)\) is **XOR**: \(x_2 \oplus x_3\)
-- \((x'_2 x'_3 + x_2 x_3)\) is **XNOR**: \(x_2 \odot x_3\)
 
 So:
 
