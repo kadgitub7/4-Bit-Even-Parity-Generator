@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 
-module Even_Parity_Generator(
+module EvenParityGenerator(
     input b0,
     input b1,
     input b2,

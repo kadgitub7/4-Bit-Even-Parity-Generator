@@ -29,7 +29,7 @@ initial
         {b3, b2, b1, b0} = 4'b0000;
         for(k=0;k<16;k=k+1)begin
             #10 {b0,b1,b2,b3} = k; // We are able to take the integer and assign it to the integer bits
-            $display("Input: %b%b%b%b | Parity: %b", b0, b1, b2, b3, P0);
+            $strobe("Input: %b%b%b%b | Parity: %b", b0, b1, b2, b3, P0);
         end
         $finish;
     end
