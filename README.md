@@ -119,7 +119,7 @@ $$P_0 = b_0 \oplus b_1 \oplus b_2 \oplus b_3$$
 
 The circuit uses three 2-input XOR gates in series: the first XORs b₀ and b₁, the second XORs that result with b₂, and the third XORs that result with b₃ to produce P₀.
 
-Add circuit Diagram Here
+![Circuit Diagram](imageAssets/circuitDiagram.png)
 
 *Circuit diagram: 4-bit even parity generator (cascaded XOR gates).*
 
@@ -129,7 +129,7 @@ Add circuit Diagram Here
 
 Simulation waveform for the 4-bit even parity generator. Inputs b₀–b₃ cycle through all 16 combinations; P₀ is the even parity bit (green traces).
 
-Add Waveform Here
+![Waveform Diagram](imageAssets/waveformDiagram.png)
 
 *Waveform: inputs b₀, b₁, b₂, b₃ and parity output P₀.*
 
